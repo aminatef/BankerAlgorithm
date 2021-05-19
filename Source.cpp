@@ -154,19 +154,20 @@ int main() {
 			cout << "NO" << endl;
 		}
 		else {
-			s = "YES,safe state<";
+			s = "YES,safe state";
+			if (num==2) {
+				s += "<P" + to_string(proccess)+"req" + ",";
+			}
+			else {
+				s += "<";
+			}
+
 			for (int i = 0; i < n; i++) {
 				if (i == (n - 1)) {
-					if (ans[i] == proccess) { s += "P" + to_string(ans[i])+"req" + ">"; }
-					else {
-						s += "P" + to_string(ans[i]) + ">";
-					}
+					s += "P" + to_string(ans[i]) + ">";
 				}
 				else {
-					if (ans[i] == proccess) { s += "P" + to_string(ans[i])+"req" + ","; }
-					else {
-						s += "P" + to_string(ans[i]) + ",";
-					}
+					s += "P" + to_string(ans[i]) + ",";
 				}
 			}
 			cout << s << endl;
