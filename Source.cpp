@@ -157,13 +157,13 @@ int main() {
 			s = "YES,safe state<";
 			for (int i = 0; i < n; i++) {
 				if (i == (n - 1)) {
-					if (i == proccess) { s += "P" + to_string(ans[i])+"req" + ">"; }
+					if (ans[i] == proccess) { s += "P" + to_string(ans[i])+"req" + ">"; }
 					else {
 						s += "P" + to_string(ans[i]) + ">";
 					}
 				}
 				else {
-					if (i == proccess) { s += "P" + to_string(ans[i])+"req" + ","; }
+					if (ans[i] == proccess) { s += "P" + to_string(ans[i])+"req" + ","; }
 					else {
 						s += "P" + to_string(ans[i]) + ",";
 					}
