@@ -128,7 +128,7 @@ int main() {
 
 	vector<int> req(m);
 	int num=1;
-	int proccess=0;
+	int proccess=n+10;
 	vector<int>ans;
 	string s="";
 	cout << "1)system safty enquiry" << endl;
@@ -157,10 +157,16 @@ int main() {
 			s = "YES,safe state<";
 			for (int i = 0; i < n; i++) {
 				if (i == (n - 1)) {
-					s += "P" + to_string(ans[i]) + ">";
+					if (i == proccess) { s += "P" + to_string(ans[i])+"req" + ">"; }
+					else {
+						s += "P" + to_string(ans[i]) + ">";
+					}
 				}
 				else {
-					s += "P" + to_string(ans[i]) + ",";
+					if (i == proccess) { s += "P" + to_string(ans[i])+"req" + ","; }
+					else {
+						s += "P" + to_string(ans[i]) + ",";
+					}
 				}
 			}
 			cout << s << endl;
