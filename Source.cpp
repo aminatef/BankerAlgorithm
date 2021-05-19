@@ -87,7 +87,7 @@ int main() {
 	//streambuf* cinbuf = std::cin.rdbuf();
 	//cin.rdbuf(in.rdbuf());
 	//**********************************
-	cout << "Enter n and m respectvely: " << endl;
+	cout << "Enter n and m respectvely: spearted by spaces" << endl;
 	cin >> n >> m;
 	vector<int> available(m);
 	vector<vector<int>> max(n, vector<int>(m));
